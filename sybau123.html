@@ -3,60 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to epstein clicker</title>
+    <title></title>
 </head>
-
+<style>
+    @font-face {
+        font-family: "minecraft";
+        src: url("Minecraft.ttf");
+    }
+</style>
 <body>
-        <p text-align: center; margin-top: 20px; font-size: 32px; font-weight: bold; >Welcome to epstein clicker</p>
- <p>Count: <span id="count">0</span></p>
-    <p>Upgrade Cost: <span id="cost">10</span></p>
-    <p>minors Cost: <span id="minorscost">20</span></p>
-    <button style="position: fixed; top: 50%; left:50%; transform: translate(-50%, -50%); height: 20cm; width: 20cm; font-size: xx-large; background-image: url(suy.webp); background-size: cover; background-position: center; border: none; color:white;" onclick="increaseCount()"></button>
-    <button onclick="buyUpgrade()">Upgrade</button>
-    <button onclick="buyminors()">minors </button>
+    
+    <id style="position: fixed; left:15%; font-size: 60px; font-family: minecraft ">Survive<br> The<br> Night<br> Sybau<br> Legend<br></id>
+    <button style="border: none; position: fixed; left: 15%; bottom: 55%; font-size: 50px; font-family: minecraft">NEW GAME</button>
 
-    <script>
-        let count = 0;
-        let upgradeCost = 10;
-        let upgradePower = 1;
-        let minorscost=20;
-        let upgrademinors=1;
-
-        const countDisplay = document.getElementById("count");
-        const costDisplay = document.getElementById("cost");
-        const grandDisplay = document.getElementById("minorscost");
-
-        function increaseCount() {
-            count += upgradePower;
-            updateDisplay();
-        }
-        function buyminors(){
-            if (count>=minorscost){
-            count-=minorscost;
-            upgrademinors++;
-            minorscost+=20;
-            updateDisplay();
-            }
-        }
-        function minorsmoney(){
-            count+=upgrademinors;
-            updateDisplay();
-        }
-        function buyUpgrade() {
-            if (count >= upgradeCost) {
-                count -= upgradeCost;
-                upgradePower++;
-                upgradeCost += 10;
-                updateDisplay();
-            }
-        }
-
-        function updateDisplay() {
-            countDisplay.textContent = count;
-            costDisplay.textContent = upgradeCost;
-            grandDisplay.textContent = minorscost;
-        }
-                    setInterval(minorsmoney, 1000);
-    </script>
 </body>
 </html>
